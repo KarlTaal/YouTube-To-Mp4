@@ -5,7 +5,9 @@ import os
 # peale seda teha muudatusi allalaetud skriptis link:
 # https://stackoverflow.com/questions/62098925/why-my-youtube-video-downloader-only-downloads-some-videos-and-for-other-videos
 
-
+if not os.path.exists('songs'):
+    os.makedirs('songs')
+    
 links  = []
 with open("laulud.txt", "r", encoding="UTF-8") as f:
     for r in f:
